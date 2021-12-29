@@ -21,7 +21,7 @@ type server struct {
 
 func (s *server) SayHello(ctx context.Context, income *pbFile.HelloBody) (*pbFile.HelloReply, error) {
 	fmt.Println("Received: %v", income.GetName(), income.GetLastname())
-	return &pbFile.HelloReply{Respond: "Bah Bah Haj Agha " + income.GetName() + " " + income.GetLastname()}, nil
+	return &pbFile.HelloReply{Respond: "Hello  " + income.GetName() + " " + income.GetLastname()}, nil
 }
 func main() {
 	fmt.Println("Preparing to listen on port" + port)
